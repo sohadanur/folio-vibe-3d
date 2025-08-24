@@ -4,8 +4,9 @@ import Scene3D from '../3d/Scene3D';
 
 const AboutSection = () => {
   const skills = [
-    'React & TypeScript', 'Node.js & Python', 'Machine Learning',
-    'Cloud Architecture', 'UI/UX Design', 'DevOps & CI/CD'
+    'Python & SQL', 'Django & FastAPI', 'Machine Learning',
+    'QA Testing', 'Postman & Selenium', 'Natural Language Processing',
+    'Computer Vision', 'API Testing', 'Git & GitHub'
   ];
 
   return (
@@ -20,14 +21,14 @@ const AboutSection = () => {
           >
             <h2 className="text-4xl font-bold mb-6">About Me</h2>
             <p className="text-lg text-text-dim mb-6 leading-relaxed">
-              I'm a passionate software developer with expertise in full-stack development, 
-              machine learning, and cloud technologies. I love creating elegant solutions 
-              to complex problems and turning ideas into reality.
+              I'm a motivated QA Engineer and AI Engineer with a strong foundation in software testing, 
+              machine learning, and full-stack development. I have experience in manual testing, 
+              API testing, and building AI-powered applications using Python and Django.
             </p>
             <p className="text-lg text-text-dim mb-8 leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, writing 
-              technical articles, or contributing to open-source projects. I believe in 
-              continuous learning and sharing knowledge with the community.
+              Currently working at BacBon Limited as a Junior AI Engineer, I'm passionate about 
+              delivering reliable, user-friendly software. I hold a BSc in Computer Science and Engineering 
+              from AIUB with a CGPA of 3.95, and I'm constantly learning new technologies.
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

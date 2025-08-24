@@ -7,32 +7,14 @@ import { ExternalLink, Users, Calendar } from 'lucide-react';
 const PublicationsSection = () => {
   const publications = [
     {
-      title: "Advanced Machine Learning Techniques for Real-Time Data Processing",
-      journal: "IEEE Transactions on Pattern Analysis",
+      title: "Touchscreen Interaction for Error Minimization Using Fitts' Law and Error Probability",
+      conference: "International Conference on Computing Advancements (ICCA-2024)",
       year: "2024",
-      authors: ["Your Name", "Co-Author 1", "Co-Author 2"],
-      abstract: "This paper presents novel approaches to machine learning optimization for real-time data processing applications.",
+      authors: ["Khandaker Fatema Nur Sohada", "Co-Author"],
+      abstract: "This paper explores methods for minimizing errors in touchscreen interactions by applying Fitts' Law principles and error probability analysis to improve user interface design.",
       status: "Published",
-      doi: "10.1109/TPAMI.2024.xxxxx",
+      doi: "https://dl.acm.org/doi/full/10.1145/3723178.3723211",
       featured: true
-    },
-    {
-      title: "Scalable Web Architecture Patterns for Modern Applications",
-      conference: "International Conference on Software Engineering",
-      year: "2023",
-      authors: ["Your Name", "Research Partner"],
-      abstract: "An in-depth analysis of scalable web architecture patterns and their implementation in modern cloud environments.",
-      status: "Accepted",
-      featured: false
-    },
-    {
-      title: "Optimizing User Experience in Progressive Web Applications",
-      journal: "ACM Computing Surveys",
-      year: "2023",
-      authors: ["Your Name"],
-      abstract: "A comprehensive survey of UX optimization techniques specifically tailored for progressive web applications.",
-      status: "Under Review",
-      featured: false
     }
   ];
 
@@ -97,7 +79,7 @@ const PublicationsSection = () => {
                       <span>{pub.year}</span>
                       <span className="mx-2">•</span>
                       <span className="font-medium">
-                        {pub.journal || pub.conference}
+                        {pub.conference}
                       </span>
                     </div>
                     
@@ -115,7 +97,12 @@ const PublicationsSection = () => {
                   
                   <div className="flex items-center gap-3">
                     {pub.doi && (
-                      <Button variant="ghost" size="sm" className="group p-0 h-auto">
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        className="group p-0 h-auto"
+                        onClick={() => window.open(pub.doi, '_blank')}
+                      >
                         View Paper
                         <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </Button>

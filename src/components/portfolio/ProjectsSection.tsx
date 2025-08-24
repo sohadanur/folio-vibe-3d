@@ -1,26 +1,49 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { ExternalLink } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "AI-Powered Analytics Dashboard",
-      description: "Real-time analytics platform with machine learning insights for business intelligence.",
-      technologies: ["React", "TensorFlow.js", "D3.js", "FastAPI"],
+      title: "BCDP Website - Bangladesh Climate Development Partnership",
+      description: "A role-based web platform for managing user access, project data, graph representation, and performance reporting with API testing using Postman.",
+      technologies: ["Django", "GenAI", "Numpy", "Pandas", "Postman"],
       status: "Completed",
-      featured: true
+      featured: true,
+      url: "https://bcdp-front.clmsbd.com/"
     },
     {
-      title: "Collaborative Code Editor",
-      description: "Web-based code editor with real-time collaboration features and syntax highlighting.",
-      technologies: ["Vue.js", "WebSockets", "Monaco Editor", "Node.js"],
-      status: "In Progress"
+      title: "Textbook Generator", 
+      description: "Dynamic textbook generation system based on grade, subject, and word count using Mistral ML model with comprehensive QA testing.",
+      technologies: ["FastAPI", "Streamlit", "Pydantic", "Mistral AI"],
+      status: "Completed",
+      url: "http://103.209.40.213:8501/"
     },
     {
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration and inventory management.",
-      technologies: ["Next.js", "Stripe", "PostgreSQL", "Prisma"],
+      title: "AI Chatbot for Portfolio",
+      description: "Real-time AI chatbot using Flask and Gemini-Pro API with comprehensive API testing and conversational QA validation.",
+      technologies: ["Flask", "Gemini-Pro API", "Python", "Postman"],
+      status: "Completed",
+      url: "https://www.yellowpenguin.co.kr/"
+    },
+    {
+      title: "Course Recommendation System",
+      description: "Flask-based recommendation system using TF-IDF, cosine similarity, and fuzzy matching with extensive functional testing.",
+      technologies: ["Flask", "Scikit-learn", "FuzzyWuzzy", "TF-IDF"],
+      status: "Completed"
+    },
+    {
+      title: "E-Learning with Speaker Detection",
+      description: "E-learning platform with built-in speaker detection feature for enhanced user engagement and interaction analysis.",
+      technologies: ["Django", "Speaker Recognition API", "Analytics"],
+      status: "Completed"
+    },
+    {
+      title: "Loop Deck - Arduino Controller",
+      description: "Hardware and software device built with Arduino Leonardo to make Photoshop and gaming features easier using knobs.",
+      technologies: ["Arduino", "C++", "Hardware Design"],
       status: "Completed"
     }
   ];
@@ -73,13 +96,27 @@ const ProjectsSection = () => {
                   <CardContent>
                     <p className="text-text-dim mb-4">{project.description}</p>
                     
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map(tech => (
                         <Badge key={tech} variant="secondary" className="text-xs">
                           {tech}
                         </Badge>
                       ))}
                     </div>
+                    
+                    {project.url && (
+                      <div className="flex justify-end">
+                        <Button 
+                          variant="ghost" 
+                          size="sm" 
+                          className="group p-0 h-auto text-primary"
+                          onClick={() => window.open(project.url, '_blank')}
+                        >
+                          View Project
+                          <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        </Button>
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>

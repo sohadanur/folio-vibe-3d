@@ -6,45 +6,59 @@ import { Building, Calendar, MapPin } from 'lucide-react';
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Senior Software Engineer",
-      company: "Tech Innovation Corp",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
+      title: "Junior AI Engineer",
+      company: "BacBon Limited",
+      location: "Dhaka, Bangladesh",
+      period: "Nov 2024 - Present",
       type: "Full-time",
-      description: "Leading the development of scalable web applications and mentoring junior developers. Architected microservices handling 1M+ daily requests.",
-      technologies: ["React", "TypeScript", "Node.js", "AWS", "Docker"],
+      description: "Working on AI algorithms and researching AI models and tools. Contributing to innovative AI solutions for real-world applications.",
+      technologies: ["Python", "Machine Learning", "AI Models", "Research"],
       achievements: [
-        "Reduced application load time by 40%",
-        "Led team of 5 developers",
-        "Implemented CI/CD pipeline reducing deployment time by 60%"
+        "Researched and implemented AI algorithms",
+        "Contributed to AI model development",
+        "Collaborated on innovative AI solutions"
       ]
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Solutions Inc",
-      location: "New York, NY",
-      period: "2020 - 2022",
-      type: "Full-time",
-      description: "Developed and maintained multiple client-facing applications using modern web technologies. Collaborated with design teams to create exceptional user experiences.",
-      technologies: ["Vue.js", "Python", "Django", "PostgreSQL", "Redis"],
+      title: "Research Assistant",
+      company: "EIT",
+      location: "Melbourne, Australia",
+      period: "July 2024 - Present",
+      type: "Part-time",
+      description: "Conducting research in emerging technologies and contributing to academic publications. Working on cutting-edge research projects.",
+      technologies: ["Research", "Academic Writing", "Data Analysis"],
       achievements: [
-        "Built 3 major client applications from scratch",
-        "Improved code coverage to 90%",
-        "Reduced bug reports by 50%"
+        "Co-authored academic publication",
+        "Contributed to research on touchscreen interaction",
+        "Applied Fitts' Law and error probability principles"
       ]
     },
     {
-      title: "Software Developer",
-      company: "StartupXYZ",
-      location: "Austin, TX",
-      period: "2019 - 2020",
-      type: "Full-time",
-      description: "Worked in a fast-paced startup environment building MVP products and iterating based on user feedback. Gained experience in multiple technologies and domains.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Socket.io"],
+      title: "AI Engineer Intern",
+      company: "BacBon Limited", 
+      location: "Dhaka, Bangladesh",
+      period: "Aug 2024 - Oct 2024",
+      type: "Internship",
+      description: "Worked on AI algorithms and researched AI models and tools. Gained hands-on experience in machine learning and AI development.",
+      technologies: ["Python", "TensorFlow", "PyTorch", "ML Models"],
       achievements: [
-        "Shipped MVP in 3 months",
-        "Implemented real-time features",
-        "Contributed to $2M Series A funding"
+        "Developed AI-powered applications",
+        "Researched machine learning algorithms",
+        "Built proof-of-concept AI solutions"
+      ]
+    },
+    {
+      title: "Web Development Intern",
+      company: "Battery Low Interactive Limited",
+      location: "Dhaka, Bangladesh", 
+      period: "Jan 2023 - Apr 2023",
+      type: "Internship",
+      description: "Worked on developing and modifying the Peacify website. Gained experience in web development and project collaboration.",
+      technologies: ["HTML", "CSS", "JavaScript", "Web Development"],
+      achievements: [
+        "Enhanced Peacify website functionality",
+        "Collaborated with development team",
+        "Improved user interface components"
       ]
     }
   ];

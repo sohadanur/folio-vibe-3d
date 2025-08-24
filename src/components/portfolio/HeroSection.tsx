@@ -49,8 +49,8 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            I'm a passionate developer creating innovative solutions at the intersection of 
-            technology and user experience. Let's build something amazing together.
+            I'm a motivated QA Engineer and AI Engineer with expertise in software testing, 
+            machine learning, and full-stack development. Let's build reliable, innovative solutions together.
           </motion.p>
           
           <motion.div 
@@ -79,9 +79,9 @@ const HeroSection = () => {
             transition={{ delay: 1 }}
           >
             {[
-              { icon: Github, href: '#', label: 'GitHub' },
+              { icon: Github, href: 'https://github.com/sohadanur', label: 'GitHub' },
               { icon: Linkedin, href: '#', label: 'LinkedIn' },
-              { icon: Mail, href: '#', label: 'Email' }
+              { icon: Mail, href: 'mailto:sohadanur01@gmail.com', label: 'Email' }
             ].map((social, index) => (
               <motion.a
                 key={social.label}
