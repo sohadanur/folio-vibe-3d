@@ -62,7 +62,11 @@ const HeroSection = () => {
             <Button size="lg" className="hero-gradient glow-effect">
               View My Work
             </Button>
-            <Button variant="outline" size="lg">
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Get In Touch
             </Button>
           </motion.div>
