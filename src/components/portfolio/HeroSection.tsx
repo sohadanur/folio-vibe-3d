@@ -49,8 +49,7 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            I'm a motivated QA Engineer and AI Engineer with expertise in software testing, 
-            machine learning, and full-stack development. Let's build reliable, innovative solutions together.
+            An enthusiast of research, innovation, and AI, I'm a driven AI Engineer and a proud gold medalist. With expertise in machine learning, I'm passionate about building reliable, innovative solutions that push the boundaries of technology. Let's create something groundbreaking together!
           </motion.p>
           
           <motion.div 
@@ -80,7 +79,7 @@ const HeroSection = () => {
           >
             {[
               { icon: Github, href: 'https://github.com/sohadanur', label: 'GitHub' },
-              { icon: Linkedin, href: '#', label: 'LinkedIn' },
+              { icon: Linkedin, href: 'https://www.linkedin.com/in/sohada-hasan-336651231/', label: 'LinkedIn' },
               { icon: Mail, href: 'mailto:sohadanur01@gmail.com', label: 'Email' }
             ].map((social, index) => (
               <motion.a

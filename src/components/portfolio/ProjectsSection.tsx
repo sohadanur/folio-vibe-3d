@@ -10,7 +10,7 @@ const ProjectsSection = () => {
       title: "BCDP Website - Bangladesh Climate Development Partnership",
       description: "A role-based web platform for managing user access, project data, graph representation, and performance reporting with API testing using Postman.",
       technologies: ["Django", "GenAI", "Numpy", "Pandas", "Postman"],
-      status: "Completed",
+      status: "Ongoing",
       featured: true,
       url: "https://bcdp-front.clmsbd.com/"
     },
@@ -80,7 +80,7 @@ const ProjectsSection = () => {
                     <div className="flex items-center justify-between mb-2">
                       <Badge 
                         variant={project.status === 'Completed' ? 'default' : 'outline'}
-                        className={project.status === 'Completed' ? 'bg-green-500/20 text-green-400' : ''}
+                        className={project.status === 'Completed' ? 'bg-green-500/20 text-green-400' : project.status === 'Ongoing' ? 'bg-blue-500/20 text-blue-400' : ''}
                       >
                         {project.status}
                       </Badge>
