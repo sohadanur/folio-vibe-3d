@@ -21,12 +21,13 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <motion.div 
-            className="text-xl font-bold text-primary"
+          <motion.a 
+            href="#home"
+            className="text-xl font-bold text-primary cursor-pointer"
             whileHover={{ scale: 1.05 }}
           >
             Sohada
-          </motion.div>
+          </motion.a>
           
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item, index) => (
