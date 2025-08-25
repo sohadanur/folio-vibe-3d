@@ -28,9 +28,9 @@ const ExperienceSection = () => {
       description: "Currently researching and preparing a paper on ergonomic risk assessment for industrial sectors using deep learning models. This ongoing work aims to develop a new methodology to identify and mitigate workplace hazards.",
       technologies: ["Research", "Academic Writing", "Data Analysis"],
       achievements: [
-        "Co-authored academic publication",
-        "Contributed to research on touchscreen interaction",
-        "Applied Fitts' Law and error probability principles"
+        "Currently researching and preparing a paper on ergonomic risk assessment using deep learning for industrial sectors",
+        "This ongoing work aims to develop a new methodology to identify and mitigate workplace hazards",
+        "Learning and discovering new innovative solutions"
       ]
     },
     {
