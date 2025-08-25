@@ -8,14 +8,14 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* 3D Background */}
       <div className="absolute inset-0 opacity-30">
-        <Scene3D meshCount={5} />
+        <Scene3D meshCount={8} />
       </div>
       
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 grid-pattern opacity-20" />
       
       {/* Main Content */}
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -32,24 +32,24 @@ const HeroSection = () => {
           </motion.p>
           
           <motion.h1 
-            className="text-6xl md:text-8xl font-bold mb-6 text-glow"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 text-glow leading-tight"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Building Digital
+            Transforming Ideas Into
             <span className="hero-gradient bg-clip-text text-transparent block">
-              Experiences
+              Digital Experiences
             </span>
           </motion.h1>
           
           <motion.p 
-            className="text-xl text-text-dim mb-8 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-text-dim mb-8 max-w-2xl mx-auto leading-relaxed px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            An enthusiast of research, innovation, and AI, I'm a driven AI Engineer and a proud gold medalist. With expertise in machine learning, I'm passionate about building reliable, innovative solutions that push the boundaries of technology. Let's create something groundbreaking together!
+            As a passionate explorer of research, innovation, and artificial intelligence, my goal is to build reliable, creative solutions that push the boundaries of what's possible, making technology more accessible and impactful.
           </motion.p>
           
           <motion.div 
@@ -58,7 +58,11 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
           >
-            <Button size="lg" className="hero-gradient glow-effect">
+            <Button 
+              size="lg" 
+              className="hero-gradient glow-effect"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               View My Work
             </Button>
             <Button 

@@ -8,7 +8,7 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "BCDP Website - Bangladesh Climate Development Partnership",
-      description: "A role-based web platform for managing user access, project data, graph representation, and performance reporting with API testing using Postman.",
+      description: "The BCDP Project is a significant national initiative, involving the development of a comprehensive website for the climate department of the Bangladesh government. The platform will serve as a crucial tool for managing climate-related data, disseminating vital information, and fostering collaborative efforts to combat environmental challenges. I'm currently part of an incredible team at BacBon Limited, working together on the \"BCDP Project\".",
       technologies: ["Django", "GenAI", "Numpy", "Pandas", "Postman"],
       status: "Ongoing",
       featured: true,
@@ -62,7 +62,7 @@ const ProjectsSection = () => {
             A selection of projects that showcase my skills and passion for innovation.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -72,7 +72,7 @@ const ProjectsSection = () => {
                 viewport={{ once: true }}
               >
                 <Card 
-                  className={`h-full hover:glow-effect transition-all duration-300 ${
+                  className={`h-full hover:glow-effect transition-all duration-300 flex flex-col ${
                     project.featured ? 'ring-2 ring-primary' : ''
                   }`}
                 >
@@ -93,8 +93,8 @@ const ProjectsSection = () => {
                     <CardTitle className="text-lg">{project.title}</CardTitle>
                   </CardHeader>
                   
-                  <CardContent>
-                    <p className="text-text-dim mb-4">{project.description}</p>
+                  <CardContent className="flex-1 flex flex-col">
+                    <p className="text-text-dim mb-4 text-sm leading-relaxed">{project.description}</p>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map(tech => (
@@ -105,7 +105,7 @@ const ProjectsSection = () => {
                     </div>
                     
                     {project.url && (
-                      <div className="flex justify-end">
+                      <div className="flex justify-end mt-auto">
                         <Button 
                           variant="ghost" 
                           size="sm" 

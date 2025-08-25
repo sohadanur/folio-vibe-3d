@@ -21,14 +21,13 @@ const AboutSection = () => {
           >
             <h2 className="text-4xl font-bold mb-6">About Me</h2>
             <p className="text-lg text-text-dim mb-6 leading-relaxed">
-              I'm a motivated QA Engineer and AI Engineer with a strong foundation in software testing, 
-              machine learning, and full-stack development. I have experience in manual testing, 
-              API testing, and building AI-powered applications using Python and Django.
+              As an AI Engineer, I'm a passionate explorer of new things, a motivated problem-solver, and a wordsmith at heart. My journey is fueled by a love for research, innovation, and the endless possibilities of artificial intelligence.
+            </p>
+            <p className="text-lg text-text-dim mb-6 leading-relaxed">
+              I'm immersed in the exciting world of machine learning, crafting and refining applications that don't just work, but delight users with their reliability and seamless functionality. I thrive on building AI-powered solutions, primarily leveraging the power of Python and Django.
             </p>
             <p className="text-lg text-text-dim mb-8 leading-relaxed">
-              Currently working at BacBon Limited as a Junior AI Engineer, I'm passionate about 
-              delivering reliable, user-friendly software. I hold a BSc in Computer Science and Engineering 
-              from AIUB with a CGPA of 3.95, and I'm constantly learning new technologies.
+              With a strong academic background in Computer Science and Engineering, I'm driven by an insatiable curiosity to learn, create, and share. I believe in the power of code to tell stories and solve real-world challenges, and I'm always on the lookout for the next big idea to bring to life. Let's innovate and build the future, one line of code at a time!
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -57,7 +56,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className="relative h-96"
           >
-            <Scene3D meshCount={4} enableControls={false} />
+            <Scene3D meshCount={6} enableControls={false} />
           </motion.div>
         </div>
       </div>

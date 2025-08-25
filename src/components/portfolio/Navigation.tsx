@@ -25,7 +25,7 @@ const Navigation = () => {
             className="text-xl font-bold text-primary"
             whileHover={{ scale: 1.05 }}
           >
-            Portfolio
+            Sohada
           </motion.div>
           
           <div className="hidden md:flex items-center gap-8">
@@ -44,7 +44,15 @@ const Navigation = () => {
             ))}
           </div>
           
-          <Button variant="outline" size="sm" className="hidden md:block">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="hidden md:block"
+            onClick={() => {
+              // For now, this will show an alert. You can upload your CV and I'll integrate it
+              alert("CV download will be available once you provide the CV file!");
+            }}
+          >
             Download CV
           </Button>
         </div>

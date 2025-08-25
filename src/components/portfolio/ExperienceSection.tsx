@@ -25,7 +25,7 @@ const ExperienceSection = () => {
       location: "Melbourne, Australia",
       period: "July 2024 - Present",
       type: "Part-time",
-      description: "Conducting research in emerging technologies and contributing to academic publications. Working on cutting-edge research projects.",
+      description: "Currently researching and preparing a paper on ergonomic risk assessment for industrial sectors using deep learning models. This ongoing work aims to develop a new methodology to identify and mitigate workplace hazards.",
       technologies: ["Research", "Academic Writing", "Data Analysis"],
       achievements: [
         "Co-authored academic publication",
