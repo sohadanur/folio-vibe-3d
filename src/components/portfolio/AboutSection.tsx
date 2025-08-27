@@ -11,7 +11,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-16 relative">
+    <section id="about" className="py-12 relative">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -20,8 +20,8 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-6 text-center lg:text-left">About Me</h2>
-            <div className="text-center lg:text-left">
+            <h2 className="text-4xl font-bold mb-6 text-center">About Me</h2>
+            <div className="text-center">
               <p className="text-lg text-text-dim mb-6 leading-relaxed">
                 Motivated and technically proficient Data Scientist & AI engineer with a robust foundation in machine learning, artificial intelligence, and software engineering. Graduated with distinction from the American International University of Bangladesh, bringing hands-on experience in developing and fine-tuning AI algorithms, exploring model architectures, and working with diverse datasets. Seeking an impactful role to apply machine learning and Python expertise in a dynamic, growth-oriented company.
               </p>
@@ -59,7 +59,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className="relative h-96"
           >
-            <Scene3D meshCount={6} enableControls={false} />
+            <Scene3D meshCount={10} enableControls={false} />
           </motion.div>
         </div>
       </div>

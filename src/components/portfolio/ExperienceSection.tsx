@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Building, Calendar, MapPin } from 'lucide-react';
+import Scene3D from '../3d/Scene3D';
 
 const ExperienceSection = () => {
   const experiences = [
@@ -65,7 +66,10 @@ const ExperienceSection = () => {
 
 
   return (
-    <section id="experience" className="py-20 surface-elevated">
+    <section id="experience" className="relative py-14 surface-elevated">
+      <div aria-hidden className="pointer-events-none absolute -top-16 left-0 right-0 h-24 opacity-25">
+        <Scene3D meshCount={14} enableControls={false} />
+      </div>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

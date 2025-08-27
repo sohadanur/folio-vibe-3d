@@ -5,10 +5,10 @@ import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden">
+    <section id="home" className="min-h-screen relative flex items-center justify-center overflow-visible">
       {/* 3D Background */}
       <div className="absolute inset-0 opacity-30">
-        <Scene3D meshCount={15} />
+        <Scene3D meshCount={28} />
       </div>
       
       {/* Grid Pattern Overlay */}
@@ -104,7 +104,7 @@ const HeroSection = () => {
         
         {/* Scroll Indicator */}
         <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-2 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
