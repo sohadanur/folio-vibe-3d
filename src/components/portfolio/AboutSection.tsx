@@ -11,7 +11,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 relative">
+    <section id="about" className="py-16 relative">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -20,18 +20,20 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-6">About Me</h2>
-            <p className="text-lg text-text-dim mb-6 leading-relaxed">
-              Motivated and technically proficient Data Scientist & AI engineer with a robust foundation in machine learning, artificial intelligence, and software engineering. Graduated with distinction from the American International University of Bangladesh, bringing hands-on experience in developing and fine-tuning AI algorithms, exploring model architectures, and working with diverse datasets. Seeking an impactful role to apply machine learning and Python expertise in a dynamic, growth-oriented company.
-            </p>
-            <p className="text-lg text-text-dim mb-6 leading-relaxed">
-              My journey is fueled by a love for research, innovation, and the endless possibilities of artificial intelligence. I'm immersed in the exciting world of machine learning, crafting and refining applications that don't just work, but delight users with their reliability and seamless functionality. I thrive on building AI-powered solutions, primarily leveraging the power of Python and Django.
-            </p>
-            <p className="text-lg text-text-dim mb-8 leading-relaxed">
-              I'm driven by an insatiable curiosity to learn, create, and share. I believe in the power of code to tell stories and solve real-world challenges, and I'm always on the lookout for the next big idea to bring to life. Let's innovate and build the future, one line of code at a time!
-            </p>
+            <h2 className="text-4xl font-bold mb-6 text-center lg:text-left">About Me</h2>
+            <div className="text-center lg:text-left">
+              <p className="text-lg text-text-dim mb-6 leading-relaxed">
+                Motivated and technically proficient Data Scientist & AI engineer with a robust foundation in machine learning, artificial intelligence, and software engineering. Graduated with distinction from the American International University of Bangladesh, bringing hands-on experience in developing and fine-tuning AI algorithms, exploring model architectures, and working with diverse datasets. Seeking an impactful role to apply machine learning and Python expertise in a dynamic, growth-oriented company.
+              </p>
+              <p className="text-lg text-text-dim mb-6 leading-relaxed">
+                My journey is fueled by a love for research, innovation, and the endless possibilities of artificial intelligence. I'm immersed in the exciting world of machine learning, crafting and refining applications that don't just work, but delight users with their reliability and seamless functionality. I thrive on building AI-powered solutions, primarily leveraging the power of Python and Django.
+              </p>
+              <p className="text-lg text-text-dim mb-8 leading-relaxed">
+                I'm driven by an insatiable curiosity to learn, create, and share. I believe in the power of code to tell stories and solve real-world challenges, and I'm always on the lookout for the next big idea to bring to life. Let's innovate and build the future, one line of code at a time!
+              </p>
+            </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-center lg:justify-start">
               {skills.map((skill, index) => (
                 <motion.div
                   key={skill}

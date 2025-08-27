@@ -23,7 +23,7 @@ const FloatingMesh = ({ position, delay = 0 }: FloatingMeshProps) => {
     <mesh ref={meshRef} position={position}>
       <boxGeometry args={[0.8, 0.8, 0.8]} />
       <meshStandardMaterial 
-        color="#22d3ee" 
+        color="#b19cd9" 
         metalness={0.7}
         roughness={0.3}
         transparent

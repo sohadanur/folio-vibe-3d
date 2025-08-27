@@ -28,7 +28,7 @@ const PublicationsSection = () => {
   };
 
   return (
-    <section id="publications" className="py-20">
+    <section id="publications" className="py-16">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,21 +52,14 @@ const PublicationsSection = () => {
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card 
-                className={`h-full hover:glow-effect transition-all duration-300 ${
-                  pub.featured ? 'ring-2 ring-primary' : ''
-                }`}
-              >
+                <Card 
+                  className="h-full hover:glow-effect transition-all duration-300"
+                >
                 <CardHeader>
                   <div className="flex items-center justify-between mb-3">
                     <Badge className={getStatusColor(pub.status)}>
                       {pub.status}
                     </Badge>
-                    {pub.featured && (
-                      <Badge variant="outline" className="text-primary border-primary">
-                        Featured
-                      </Badge>
-                    )}
                   </div>
                   
                   <CardTitle className="text-xl leading-tight mb-3">
@@ -117,17 +110,6 @@ const PublicationsSection = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <Button variant="outline" size="lg">
-            View All Publications
-          </Button>
-        </motion.div>
       </div>
     </section>
   );

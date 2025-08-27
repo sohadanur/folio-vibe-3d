@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* 3D Background */}
       <div className="absolute inset-0 opacity-30">
-        <Scene3D meshCount={8} />
+        <Scene3D meshCount={15} />
       </div>
       
       {/* Grid Pattern Overlay */}
@@ -32,12 +32,12 @@ const HeroSection = () => {
           </motion.p>
           
           <motion.h1 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 text-glow leading-relaxed px-4 pt-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 text-glow leading-tight md:leading-normal px-4 pt-4"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Transforming Ideas Into
+            <span className="block">Transforming Ideas Into</span>
             <span className="hero-gradient bg-clip-text text-transparent block">
               Digital Experiences
             </span>

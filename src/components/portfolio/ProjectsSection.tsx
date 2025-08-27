@@ -49,7 +49,7 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 surface">
+    <section id="projects" className="py-16 surface">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -72,9 +72,7 @@ const ProjectsSection = () => {
                 viewport={{ once: true }}
               >
                 <Card 
-                  className={`h-full hover:glow-effect transition-all duration-300 flex flex-col ${
-                    project.featured ? 'ring-2 ring-primary' : ''
-                  }`}
+                  className="h-full hover:glow-effect transition-all duration-300 flex flex-col"
                 >
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
@@ -84,11 +82,6 @@ const ProjectsSection = () => {
                       >
                         {project.status}
                       </Badge>
-                      {project.featured && (
-                        <Badge variant="outline" className="text-primary border-primary">
-                          Featured
-                        </Badge>
-                      )}
                     </div>
                     <CardTitle className="text-lg">{project.title}</CardTitle>
                   </CardHeader>

@@ -9,7 +9,7 @@ interface Scene3DProps {
   enableControls?: boolean;
 }
 
-const Scene3D = ({ className = '', meshCount = 3, enableControls = true }: Scene3DProps) => {
+const Scene3D = ({ className = '', meshCount = 12, enableControls = true }: Scene3DProps) => {
   return (
     <div className={`scene-3d ${className}`}>
       <Canvas

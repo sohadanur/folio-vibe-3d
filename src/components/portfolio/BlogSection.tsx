@@ -31,7 +31,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <section id="blog" className="py-20 surface-elevated">
+    <section id="blog" className="py-16 surface-elevated">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -56,9 +56,7 @@ const BlogSection = () => {
               viewport={{ once: true }}
             >
               <Card 
-                className={`h-full hover:glow-effect transition-all duration-300 ${
-                  post.featured ? 'ring-2 ring-primary' : ''
-                }`}
+                className="h-full hover:glow-effect transition-all duration-300"
               >
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
@@ -94,17 +92,6 @@ const BlogSection = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <Button variant="outline" size="lg">
-            View All Posts
-          </Button>
-        </motion.div>
       </div>
     </section>
   );
