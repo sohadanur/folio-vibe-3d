@@ -7,9 +7,10 @@ interface Scene3DProps {
   className?: string;
   meshCount?: number;
   enableControls?: boolean;
+  sizeRange?: [number, number];
 }
 
-const Scene3D = ({ className = '', meshCount = 12, enableControls = true }: Scene3DProps) => {
+const Scene3D = ({ className = '', meshCount = 12, enableControls = true, sizeRange = [0.6, 1] }: Scene3DProps) => {
   return (
     <div className={`scene-3d ${className}`}>
       <Canvas
@@ -21,17 +22,21 @@ const Scene3D = ({ className = '', meshCount = 12, enableControls = true }: Scen
           <ambientLight intensity={0.5} />
           <pointLight position={[10, 10, 10]} intensity={1} />
           
-          {Array.from({ length: meshCount }).map((_, i) => (
-            <FloatingMesh 
-              key={i} 
-              position={[
-                (Math.random() - 0.5) * 4,
-                (Math.random() - 0.5) * 4, 
-                (Math.random() - 0.5) * 4
-              ]}
-              delay={i * 0.5}
-            />
-          ))}
+          {Array.from({ length: meshCount }).map((_, i) => {
+            const size = sizeRange[0] + Math.random() * (sizeRange[1] - sizeRange[0]);
+            return (
+              <FloatingMesh 
+                key={i} 
+                position={[
+                  (Math.random() - 0.5) * 4,
+                  (Math.random() - 0.5) * 4, 
+                  (Math.random() - 0.5) * 4
+                ]}
+                delay={i * 0.5}
+                size={size}
+              />
+            );
+          })}
           
           {enableControls && (
             <OrbitControls 

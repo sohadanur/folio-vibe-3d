@@ -77,8 +77,14 @@ const ProjectsSection = () => {
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
                       <Badge 
-                        variant={project.status === 'Completed' ? 'default' : 'outline'}
-                        className={project.status === 'Completed' ? 'bg-green-500/20 text-green-400' : project.status === 'Ongoing' ? 'bg-blue-500/20 text-blue-400' : ''}
+                        variant="outline"
+                        className={
+                          project.status === 'Completed'
+                            ? 'bg-primary/20 text-primary border-primary/30'
+                            : project.status === 'Ongoing'
+                              ? 'bg-primary/10 text-primary border-primary/20'
+                              : ''
+                        }
                       >
                         {project.status}
                       </Badge>

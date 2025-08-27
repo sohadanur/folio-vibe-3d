@@ -67,8 +67,8 @@ const ExperienceSection = () => {
 
   return (
     <section id="experience" className="relative py-14 surface-elevated">
-      <div aria-hidden className="pointer-events-none absolute -top-16 left-0 right-0 h-24 opacity-25">
-        <Scene3D meshCount={14} enableControls={false} />
+      <div aria-hidden className="pointer-events-none absolute -top-16 left-0 right-0 h-32 opacity-25">
+        <Scene3D meshCount={24} enableControls={false} sizeRange={[1.2, 2]} />
       </div>
       <div className="container mx-auto px-6">
         <motion.div
