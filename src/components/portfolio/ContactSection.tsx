@@ -12,7 +12,7 @@ const ContactSection = () => {
       icon: Mail,
       label: "Email",
       value: "sohadanur01@gmail.com",
-      href: "mailto:sohadanur01@gmail.com"
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=sohadanur01@gmail.com&su=Let's%20Connect&body=Hi%20Sohan,%0A%0AI%20found%20your%20portfolio%20and%20would%20like%20to%20connect..."
     },
     {
       icon: Phone,

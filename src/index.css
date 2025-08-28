@@ -18,9 +18,9 @@ All colors MUST be HSL.
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    /* Lavender accent color */
-    --primary: 280 55% 68%;
-    --primary-strong: 280 55% 60%;
+    /* Blue accent color */
+    --primary: 215 100% 65%;
+    --primary-strong: 215 100% 55%;
     --primary-foreground: 240 10% 3.9%;
 
     /* Subtle dark variations */
@@ -30,7 +30,7 @@ All colors MUST be HSL.
     --muted: 240 4% 16%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 280 55% 68%;
+    --accent: 215 100% 65%;
     --accent-foreground: 240 10% 3.9%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,20 +38,20 @@ All colors MUST be HSL.
 
     --border: 240 4% 16%;
     --input: 240 4% 16%;
-    --ring: 280 55% 68%;
+    --ring: 215 100% 65%;
 
     --radius: 0.75rem;
     
     /* Custom portfolio colors */
-    --hero-gradient-start: 280 55% 68%;
-    --hero-gradient-end: 290 60% 74%;
+    --hero-gradient-start: 215 100% 65%;
+    --hero-gradient-end: 200 100% 70%;
     --surface-elevated: 240 5% 6%;
     --text-dim: 240 5% 64.9%;
-    --glow: 280 55% 68%;
+    --glow: 215 100% 65%;
     
     /* 3D scene colors */
-    --mesh-primary: 280 55% 68%;
-    --mesh-secondary: 290 60% 74%;
+    --mesh-primary: 215 100% 65%;
+    --mesh-secondary: 200 100% 70%;
     --ambient-light: 240 10% 3.9%;
 
     --sidebar-background: 0 0% 98%;
@@ -82,8 +82,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 280 55% 68%;
-    --primary-strong: 280 55% 60%;
+    --primary: 215 100% 65%;
+    --primary-strong: 215 100% 55%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 240 4.8% 95.9%;
@@ -92,7 +92,7 @@ All colors MUST be HSL.
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 280 55% 68%;
+    --accent: 215 100% 65%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -100,11 +100,11 @@ All colors MUST be HSL.
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 280 55% 68%;
+    --ring: 215 100% 65%;
     
     --surface-elevated: 240 5.9% 96%;
     --text-dim: 240 3.8% 46.1%;
-    --glow: 280 55% 68%;
+    --glow: 215 100% 65%;
   }
 }
 

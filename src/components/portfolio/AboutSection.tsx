@@ -11,9 +11,9 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="pt-12 pb-6 relative">
+    <section id="about" className="pt-8 pb-4 relative">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -63,8 +63,8 @@ const AboutSection = () => {
           </motion.div>
         </div>
       </div>
-      <div aria-hidden className="pointer-events-none -mt-6 h-56 opacity-30">
-        <Scene3D meshCount={36} enableControls={false} sizeRange={[1.2, 2.2]} />
+      <div aria-hidden className="pointer-events-none -mt-4 h-40 opacity-30">
+        <Scene3D meshCount={50} enableControls={false} sizeRange={[0.4, 0.8]} />
       </div>
     </section>
   );
