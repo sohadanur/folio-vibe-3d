@@ -20,8 +20,8 @@ const PublicationsSection = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "Published": return "bg-primary/20 text-primary border-primary/30";
-      case "Accepted": return "bg-primary/10 text-primary border-primary/20";
+      case "Published": return "bg-primary/15 text-[hsl(var(--primary-strong))] border-[hsl(var(--primary-strong))]/30";
+      case "Accepted": return "bg-primary/10 text-[hsl(var(--primary-strong))] border-[hsl(var(--primary-strong))]/20";
       case "Under Review": return "bg-yellow-500/20 text-yellow-400 border-yellow-500/30";
       default: return "bg-gray-500/20 text-gray-400 border-gray-500/30";
     }

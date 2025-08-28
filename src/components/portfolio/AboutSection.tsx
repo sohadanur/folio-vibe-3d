@@ -11,7 +11,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-12 relative">
+    <section id="about" className="pt-12 pb-6 relative">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -62,6 +62,9 @@ const AboutSection = () => {
             <Scene3D meshCount={10} enableControls={false} />
           </motion.div>
         </div>
+      </div>
+      <div aria-hidden className="pointer-events-none -mt-6 h-56 opacity-30">
+        <Scene3D meshCount={36} enableControls={false} sizeRange={[1.2, 2.2]} />
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen relative flex items-center justify-center overflow-visible">
       {/* 3D Background */}
       <div className="absolute inset-0 opacity-30">
-        <Scene3D meshCount={28} />
+        <Scene3D meshCount={36} sizeRange={[0.8, 1.2]} />
       </div>
       
       {/* Grid Pattern Overlay */}
@@ -32,7 +32,7 @@ const HeroSection = () => {
           </motion.p>
           
           <motion.h1 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 text-glow leading-tight md:leading-normal px-4 pt-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 text-glow leading-tight md:leading-normal tracking-tight overflow-visible px-4 pt-4"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -59,8 +59,8 @@ const HeroSection = () => {
             transition={{ delay: 0.8 }}
           >
             <Button 
-              size="lg" 
-              className="hero-gradient glow-effect"
+              variant="outline"
+              size="lg"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View My Work
@@ -73,7 +73,16 @@ const HeroSection = () => {
               Get In Touch
             </Button>
           </motion.div>
-          
+
+          {/* Scroll Indicator */}
+          <motion.div 
+            className="flex justify-center mb-8"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <ArrowDown className="w-6 h-6 text-primary" />
+          </motion.div>
+
           {/* Social Links */}
           <motion.div 
             className="flex justify-center gap-6 mb-16"
@@ -102,14 +111,6 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
         
-        {/* Scroll Indicator */}
-        <motion.div 
-          className="absolute bottom-2 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <ArrowDown className="w-6 h-6 text-primary" />
-        </motion.div>
       </div>
     </section>
   );

@@ -29,7 +29,7 @@ const Navigation = () => {
             Sohada
           </motion.a>
           
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.label}

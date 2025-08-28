@@ -20,6 +20,7 @@ All colors MUST be HSL.
 
     /* Lavender accent color */
     --primary: 280 55% 68%;
+    --primary-strong: 280 55% 60%;
     --primary-foreground: 240 10% 3.9%;
 
     /* Subtle dark variations */
@@ -82,6 +83,7 @@ All colors MUST be HSL.
     --popover-foreground: 240 10% 3.9%;
 
     --primary: 280 55% 68%;
+    --primary-strong: 280 55% 60%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 240 4.8% 95.9%;

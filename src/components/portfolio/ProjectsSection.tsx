@@ -80,9 +80,9 @@ const ProjectsSection = () => {
                         variant="outline"
                         className={
                           project.status === 'Completed'
-                            ? 'bg-primary/20 text-primary border-primary/30'
+                            ? 'bg-primary/15 text-[hsl(var(--primary-strong))] border-[hsl(var(--primary-strong))]/30'
                             : project.status === 'Ongoing'
-                              ? 'bg-primary/10 text-primary border-primary/20'
+                              ? 'bg-primary/10 text-[hsl(var(--primary-strong))] border-[hsl(var(--primary-strong))]/20'
                               : ''
                         }
                       >
