@@ -13,8 +13,9 @@ const AboutSection = () => {
   return (
     <section id="about" className="pt-8 pb-4 relative">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 gap-8 place-items-center">
           <motion.div
+            className="max-w-3xl mx-auto"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -57,7 +58,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative h-96"
+            className="relative h-96 hidden"
           >
             <Scene3D meshCount={10} enableControls={false} />
           </motion.div>
