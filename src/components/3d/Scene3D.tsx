@@ -26,13 +26,18 @@ const Scene3D = ({ className = '', meshCount = 12, enableControls = true, sizeRa
             const size = sizeRange[0] + Math.random() * (sizeRange[1] - sizeRange[0]);
             // Create more scattered positioning for better spread
             const spread = meshCount <= 8 ? 12 : 8;
+            // For horizontal sections (like between About and Experience), spread more horizontally
+            const isHorizontal = className.includes('h-40') || enableControls === false;
+            const horizontalSpread = isHorizontal ? spread * 1.8 : spread;
+            const verticalSpread = isHorizontal ? spread * 0.4 : spread * 0.75;
+            
             return (
               <FloatingMesh 
                 key={i} 
                 position={[
-                  (Math.random() - 0.5) * spread,
-                  (Math.random() - 0.5) * (spread * 0.75), 
-                  (Math.random() - 0.5) * spread
+                  (Math.random() - 0.5) * horizontalSpread,
+                  (Math.random() - 0.5) * verticalSpread, 
+                  (Math.random() - 0.5) * spread * 0.8
                 ]}
                 delay={i * 1.2}
                 size={size}
