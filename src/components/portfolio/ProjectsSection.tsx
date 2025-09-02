@@ -82,7 +82,7 @@ const ProjectsSection = () => {
                           project.status === 'Completed'
                             ? 'bg-primary/15 text-[hsl(var(--primary-strong))] border-[hsl(var(--primary-strong))]/30'
                             : project.status === 'Ongoing'
-                              ? 'bg-primary/10 text-[hsl(var(--primary-strong))] border-[hsl(var(--primary-strong))]/20'
+                              ? 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30'
                               : ''
                         }
                       >
