@@ -65,7 +65,7 @@ const AboutSection = () => {
         </div>
       </div>
       <div aria-hidden className="pointer-events-none -mt-4 h-40 opacity-15">
-        <Scene3D meshCount={5} enableControls={false} sizeRange={[0.8, 1.4]} />
+        <Scene3D meshCount={6} enableControls={false} sizeRange={[0.6, 1.0]} />
       </div>
     </section>
   );

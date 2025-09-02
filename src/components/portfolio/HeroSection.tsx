@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen relative flex items-center justify-center overflow-visible">
       {/* 3D Background */}
       <div className="absolute inset-0 opacity-30">
-        <Scene3D meshCount={36} sizeRange={[0.6, 0.9]} />
+        <Scene3D meshCount={20} sizeRange={[0.5, 0.8]} />
       </div>
       
       {/* Grid Pattern Overlay */}
