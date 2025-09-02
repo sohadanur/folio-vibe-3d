@@ -28,11 +28,11 @@ const Scene3D = ({ className = '', meshCount = 12, enableControls = true, sizeRa
               <FloatingMesh 
                 key={i} 
                 position={[
-                  (Math.random() - 0.5) * 4,
-                  (Math.random() - 0.5) * 4, 
-                  (Math.random() - 0.5) * 4
+                  (Math.random() - 0.5) * 8,
+                  (Math.random() - 0.5) * 6, 
+                  (Math.random() - 0.5) * 8
                 ]}
-                delay={i * 0.5}
+                delay={i * 1.2}
                 size={size}
               />
             );
