@@ -39,6 +39,14 @@ const Navigation = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.3 }}
                 whileHover={{ y: -2 }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector(item.href) as HTMLElement;
+                  if (element) {
+                    const offsetTop = element.offsetTop - 80; // Account for navbar height
+                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                  }
+                }}
               >
                 {item.label}
               </motion.a>

@@ -8,7 +8,7 @@ const PublicationsSection = () => {
   const publications = [
     {
       title: "Touchscreen Interaction for Error Minimization Using Fitts' Law and Error Probability",
-      conference: "International Conference on Computing Advancements (ICCA-2024)",
+      conference: "Automation Journal - MDPI",
       year: "2024",
       authors: ["Khandaker Fatema Nur Sohada", "Co-Author"],
       abstract: "This paper explores methods for minimizing errors in touchscreen interactions by applying Fitts' Law principles and error probability analysis to improve user interface design.",
@@ -62,7 +62,7 @@ const PublicationsSection = () => {
               viewport={{ once: true }}
             >
                 <Card 
-                  className="h-full hover:glow-effect transition-all duration-300"
+                  className="h-full hover:glow-effect hover-lift gradient-border transition-all duration-300"
                 >
                 <CardHeader>
                   <div className="flex items-center justify-between mb-3">

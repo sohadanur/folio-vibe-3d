@@ -32,12 +32,12 @@ const HeroSection = () => {
           </motion.p>
           
           <motion.h1 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 text-glow leading-tight md:leading-normal tracking-tight overflow-visible px-4 pt-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 text-glow leading-relaxed tracking-normal overflow-visible px-8 py-6 mt-6"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <span className="block">Transforming Ideas Into</span>
+            <span className="block mb-2">Transforming Ideas Into</span>
             <span className="hero-gradient bg-clip-text text-transparent block">
               Digital Experiences
             </span>

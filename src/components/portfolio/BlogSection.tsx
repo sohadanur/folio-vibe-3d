@@ -42,7 +42,7 @@ const BlogSection = () => {
         >
           <h2 className="text-4xl font-bold mb-4">Latest Blog Posts</h2>
           <p className="text-lg text-text-dim max-w-2xl mx-auto">
-            Thoughts, tutorials, and insights about technology, development, and innovation.
+            Welcoming you to my digital space for thoughts and personal scribbles. Thoughts, tutorials, and insights about technology, development, and innovation.
           </p>
         </motion.div>
 
@@ -56,7 +56,7 @@ const BlogSection = () => {
               viewport={{ once: true }}
             >
               <Card 
-                className="h-full hover:glow-effect transition-all duration-300"
+                className="h-full hover:glow-effect hover-lift sparkle-effect transition-all duration-300"
               >
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
