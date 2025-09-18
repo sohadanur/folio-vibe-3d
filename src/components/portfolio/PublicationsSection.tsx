@@ -18,7 +18,7 @@ const PublicationsSection = () => {
     },
     {
       title: "Automated Ergonomic Risk Classification Using 2D Pose Estimation and Deep Learning: An Image-Based RULA Framework for Industrial Lifting Tasks",
-      conference: "International Journal of Ergonomics",
+      conference: "MDPI Automation Journal",
       year: "2024",
       authors: ["Khandaker Fatema Nur Sohada", "Research Team"],
       abstract: "This research presents an automated system for ergonomic risk assessment in industrial settings using 2D pose estimation and deep learning techniques, implementing the RULA framework for lifting task analysis.",
