@@ -8,7 +8,7 @@ const PublicationsSection = () => {
   const publications = [
     {
       title: "Touchscreen Interaction for Error Minimization Using Fitts' Law and Error Probability",
-      conference: "Automation Journal - MDPI",
+      conference: "ICCA '24: Proceedings of the 3rd International Conference on Computing Advancements",
       year: "2024",
       authors: ["Khandaker Fatema Nur Sohada", "Co-Author"],
       abstract: "This paper explores methods for minimizing errors in touchscreen interactions by applying Fitts' Law principles and error probability analysis to improve user interface design.",
