@@ -8,24 +8,27 @@ const SocialImpactSection = () => {
   const communityRoles = [
     {
       icon: Users,
-      title: "Board of Directors",
+      title: "Board of Directors & Trustee",
       org: "Khandaker Nurul Islam Orphanage",
+      location: "Pangsha",
       since: "Active since 2016",
       description: "Managed a 'Merit-First' tutoring program achieving 100% formal education for 30 resident orphans.",
     },
     {
       icon: BookOpen,
-      title: "Tech Educator",
+      title: "Voluntary Teacher",
       org: "Abdul Jalil Sarker Smrity Trust",
       since: "Ongoing",
       description: "Teaching ethics and introducing AR/VR and modern technology to underprivileged children to bridge the digital divide.",
+      link: "https://maps.app.goo.gl/nKXzrHxXY25XVFp56?g_st=aw",
     },
     {
       icon: Heart,
-      title: "Crisis Coordinator",
+      title: "Voluntary Civil Worker",
       org: "SmileMore Organization",
       since: "Since 2022",
-      description: "Leading relief efforts and supply distribution for flood victims and marginalized communities.",
+      description: "Coordinating essential supplies and relief distribution for flood victims and marginalized communities.",
+      link: "https://www.facebook.com/groups/640858149312488",
     },
   ];
 
@@ -64,7 +67,7 @@ const SocialImpactSection = () => {
                     Ongoing Initiative
                   </Badge>
                 </div>
-                <CardTitle className="text-2xl">Nirapod Sisterhood Shield</CardTitle>
+                <CardTitle className="text-2xl">Nirapod</CardTitle>
               </CardHeader>
 
               <CardContent>
@@ -104,9 +107,23 @@ const SocialImpactSection = () => {
                     </div>
                     <CardTitle className="text-lg">{role.title}</CardTitle>
                     <p className="text-sm text-primary/80 font-medium">{role.org}</p>
+                    {role.location && (
+                      <p className="text-xs text-text-dim">{role.location}</p>
+                    )}
                   </CardHeader>
                   <CardContent>
-                    <p className="text-text-dim text-sm leading-relaxed">{role.description}</p>
+                    <p className="text-text-dim text-sm leading-relaxed mb-3">{role.description}</p>
+                    {role.link && (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="group p-0 h-auto text-primary text-xs"
+                        onClick={() => window.open(role.link, '_blank')}
+                      >
+                        Learn More
+                        <ExternalLink className="w-3 h-3 ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>
