@@ -9,6 +9,7 @@ const Navigation = () => {
     { label: 'Projects', href: '#projects' },
     { label: 'Publications', href: '#publications' },
     { label: 'Blog', href: '#blog' },
+    { label: 'Social Impact', href: '#social-impact' },
     { label: 'Contact', href: '#contact' },
   ];
 
