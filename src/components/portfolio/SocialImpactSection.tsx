@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Heart, Users, BookOpen, Shield } from 'lucide-react';
+import { ExternalLink, Heart, Users, BookOpen, Shield, MapPin } from 'lucide-react';
 
 const SocialImpactSection = () => {
   const communityRoles = [
@@ -10,7 +10,9 @@ const SocialImpactSection = () => {
       icon: Users,
       title: "Board of Directors & Trustee",
       org: "Khandaker Nurul Islam Orphanage",
+      orgLink: "https://maps.app.goo.gl/4HmyiUDkfqdncSUw9",
       location: "Pangsha",
+      locationLink: "https://maps.app.goo.gl/4HmyiUDkfqdncSUw9",
       since: "Active since 2016",
       description: "Managed a 'Merit-First' tutoring program achieving 100% formal education for 30 resident orphans.",
     },
@@ -18,17 +20,21 @@ const SocialImpactSection = () => {
       icon: BookOpen,
       title: "Voluntary Teacher",
       org: "Abdul Jalil Sarker Smrity Trust",
+      orgLink: "https://maps.app.goo.gl/nKXzrHxXY25XVFp56?g_st=aw",
       since: "Ongoing",
       description: "Teaching ethics and introducing AR/VR and modern technology to underprivileged children to bridge the digital divide.",
-      link: "https://maps.app.goo.gl/nKXzrHxXY25XVFp56?g_st=aw",
     },
     {
       icon: Heart,
       title: "Voluntary Civil Worker",
       org: "SmileMore Organization",
+      orgLink: "https://www.facebook.com/groups/640858149312488",
       since: "Since 2022",
       description: "Coordinating essential supplies and relief distribution for flood victims and marginalized communities.",
-      link: "https://www.facebook.com/groups/640858149312488",
+      socialLinks: [
+        { label: "Facebook", url: "https://www.facebook.com/groups/640858149312488" },
+        { label: "Instagram", url: "https://www.instagram.com/smilemorebangladesh/" },
+      ],
     },
   ];
 
@@ -46,7 +52,7 @@ const SocialImpactSection = () => {
             Using technology and leadership to create meaningful change in communities.
           </p>
 
-          {/* Featured Project — Sisterhood Shield */}
+          {/* Featured Project — Nirapod */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -55,9 +61,7 @@ const SocialImpactSection = () => {
             className="mb-12"
           >
             <Card className="relative overflow-hidden border-primary/40 shadow-[0_0_30px_-5px_hsl(var(--primary)/0.25)] hover:shadow-[0_0_40px_-5px_hsl(var(--primary)/0.4)] transition-all duration-500">
-              {/* Glow accent line */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
-
               <CardHeader className="pb-2">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="p-2.5 rounded-lg bg-primary/15">
@@ -69,7 +73,6 @@ const SocialImpactSection = () => {
                 </div>
                 <CardTitle className="text-2xl">Nirapod</CardTitle>
               </CardHeader>
-
               <CardContent>
                 <p className="text-text-dim leading-relaxed mb-6 max-w-3xl">
                   An AI-powered safety initiative designed to empower and protect women through technology.
@@ -106,23 +109,50 @@ const SocialImpactSection = () => {
                       <span className="text-xs text-text-dim">{role.since}</span>
                     </div>
                     <CardTitle className="text-lg">{role.title}</CardTitle>
-                    <p className="text-sm text-primary/80 font-medium">{role.org}</p>
-                    {role.location && (
-                      <p className="text-xs text-text-dim">{role.location}</p>
+                    {role.orgLink ? (
+                      <a
+                        href={role.orgLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-primary/80 font-medium hover:text-primary hover:underline transition-colors inline-flex items-center gap-1"
+                      >
+                        {role.org}
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    ) : (
+                      <p className="text-sm text-primary/80 font-medium">{role.org}</p>
                     )}
+                    {role.location && role.locationLink ? (
+                      <a
+                        href={role.locationLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-text-dim hover:text-primary hover:underline transition-colors inline-flex items-center gap-1"
+                      >
+                        <MapPin className="w-3 h-3" />
+                        {role.location}
+                      </a>
+                    ) : role.location ? (
+                      <p className="text-xs text-text-dim">{role.location}</p>
+                    ) : null}
                   </CardHeader>
                   <CardContent>
                     <p className="text-text-dim text-sm leading-relaxed mb-3">{role.description}</p>
-                    {role.link && (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="group p-0 h-auto text-primary text-xs"
-                        onClick={() => window.open(role.link, '_blank')}
-                      >
-                        Learn More
-                        <ExternalLink className="w-3 h-3 ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                      </Button>
+                    {role.socialLinks && (
+                      <div className="flex flex-wrap gap-2">
+                        {role.socialLinks.map((social) => (
+                          <Button
+                            key={social.label}
+                            variant="ghost"
+                            size="sm"
+                            className="group p-0 h-auto text-primary text-xs"
+                            onClick={() => window.open(social.url, '_blank')}
+                          >
+                            {social.label}
+                            <ExternalLink className="w-3 h-3 ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                          </Button>
+                        ))}
+                      </div>
                     )}
                   </CardContent>
                 </Card>
