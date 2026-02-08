@@ -47,11 +47,11 @@ const ProjectsSection = () => {
       status: "Completed"
     },
     {
-      title: "University & Scholarship Hub",
+      title: "Walkthrough",
       description: "A comprehensive search platform for university admissions and scholarships in Bangladesh, simplifying higher education discovery for students.",
       technologies: ["Python", "Django", "FastAPI", "PostgreSQL"],
       status: "Completed",
-      url: "https://wt.aemers.com/",
+      url: "https://userwalkthrough.clmsbd.com/",
       role: "Backend Developer — BacBon Limited"
     }
   ];
@@ -119,7 +119,7 @@ const ProjectsSection = () => {
                           className="group p-0 h-auto text-primary"
                           onClick={() => window.open(project.url, '_blank')}
                         >
-                          {project.url === 'https://wt.aemers.com/' ? 'Visit Platform' : 'View Project'}
+                          {project.url === 'https://userwalkthrough.clmsbd.com/' ? 'Visit Platform' : 'View Project'}
                           <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </Button>
                       </div>
