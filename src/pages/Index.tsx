@@ -7,6 +7,7 @@ import PublicationsSection from '@/components/portfolio/PublicationsSection';
 import BlogSection from '@/components/portfolio/BlogSection';
 import SocialImpactSection from '@/components/portfolio/SocialImpactSection';
 import ContactSection from '@/components/portfolio/ContactSection';
+import ScrollToTop from '@/components/portfolio/ScrollToTop';
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         <SocialImpactSection />
         <ContactSection />
       </main>
+      <ScrollToTop />
     </div>
   );
 };
