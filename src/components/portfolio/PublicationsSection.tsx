@@ -99,14 +99,20 @@ const PublicationsSection = () => {
                   
                   <div className="flex items-center gap-3">
                     {pub.doi && (
-                      <Button 
-                        variant="ghost" 
-                        size="sm" 
+                      <Button
+                        asChild
+                        variant="ghost"
+                        size="sm"
                         className="group p-0 h-auto"
-                        onClick={() => window.open(pub.doi, '_blank')}
                       >
-                        View Paper
-                        <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        <a
+                          href={pub.doi}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Paper
+                          <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        </a>
                       </Button>
                     )}
                     <Button variant="ghost" size="sm" className="group p-0 h-auto text-text-dim">
