@@ -2,9 +2,24 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Users, Calendar } from 'lucide-react';
+import { ExternalLink, Users, Calendar, Copy, Check } from 'lucide-react';
+import { useState } from 'react';
+import { toast } from 'sonner';
 
 const PublicationsSection = () => {
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+
+  const handleCopyDoi = async (doi: string, index: number) => {
+    try {
+      await navigator.clipboard.writeText(doi);
+      setCopiedIndex(index);
+      toast.success('DOI copied to clipboard');
+      setTimeout(() => setCopiedIndex(null), 2000);
+    } catch {
+      toast.error('Failed to copy DOI');
+    }
+  };
+
   const publications = [
     {
       title: "Touchscreen Interaction for Error Minimization Using Fitts' Law and Error Probability",
@@ -99,6 +114,7 @@ const PublicationsSection = () => {
                   
                   <div className="flex items-center gap-3">
                     {pub.doi && (
+                      <>
                       <Button
                         asChild
                         variant="ghost"
@@ -114,6 +130,25 @@ const PublicationsSection = () => {
                           <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </a>
                       </Button>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="group p-0 h-auto"
+                        onClick={() => handleCopyDoi(pub.doi!, index)}
+                      >
+                        {copiedIndex === index ? (
+                          <>
+                            Copied
+                            <Check className="w-4 h-4 ml-2" />
+                          </>
+                        ) : (
+                          <>
+                            Copy DOI
+                            <Copy className="w-4 h-4 ml-2" />
+                          </>
+                        )}
+                      </Button>
+                      </>
                     )}
                     <Button variant="ghost" size="sm" className="group p-0 h-auto text-text-dim">
                       Cite
